@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(to bottom, #000000, #404040, #808080, #bfbfbf, #e0e0e0);
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: #302f2f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  border-bottom: 1px solid #f0eded;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.brand {
+  font-size: 20px;
+  color: #536a71;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;       
+  font-weight: bold;     
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #007BFF;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  border-radius: 8px;
+  width: 500px;
+  transition: box-shadow 0.2s ease;
+}
+.search-wrapper:focus-within {
+  box-shadow: 0 0 0 2px #007bff33;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  color: #000;
+  padding: 6px;
+}
+
+.search-wrapper i {
+  color: #555;
+  margin-left: 10px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.rounded-icon {
+  width: 50px; 
+  height: 50px; 
+  object-fit: cover;
+  border: none;
+  transition: 0.2s ease;
+}
+.rounded-icon:hover {
+  transform: scale(1.05);
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 100px);
+  text-align: center;
+}
+
+h1 {
+  font-size: 48px;
+  margin: 20px 0 10px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 999px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #500000;
+  color: #f6f5f8;
+}
+
+.btn-primary:hover {
+  background-color: #7a0000;
+}
+
+.btn-secondary {
+  background-color: #069129;
+  color: #fff;
+}

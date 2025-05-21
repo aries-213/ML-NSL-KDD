@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machine Learning - BrowseWatch</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #000000, #333333);
+      color: #ffffff;
+      min-height: 100vh;
+    }
+    .monitor-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 1rem;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      transition: all 0.3s ease;
+    }
+    .monitor-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .traffic-normal {
+      background-color: rgba(40, 167, 69, 0.2);
+    }
+    .traffic-attack {
+      background-color: rgba(220, 53, 69, 0.2);
+    }
+    .log-entry {
+      padding: 0.75rem;
+      border-bottom: 1px solid #444;
+      transition: all 0.2s ease;
+    }
+    .log-entry:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+    .stat-card {
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin: 0.5rem;
+      transition: all 0.3s ease;
+    }
+    .stat-card:hover {
+      transform: scale(1.03);
+    }
+    .chart-container {
+      height: 300px;
+    }
+    .model-card {
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    .progress-thin {
+      height: 5px;
+    }
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { opacity: 1; }
+      50% { opacity: 0.5; }
+      100% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-4">
+    <h1 class="text-center mb-4">Machine Learning Monitoring</h1>
+    
+    <!-- Real-time Stats Row -->
+    <div class="row mb-4">
+      <div class="col-md-3">
+        <div class="stat-card text-center">
+          <h5>Total Predictions</h5>
+          <h3 id="total-predictions" class="pulse">0</h3>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="stat-card text-center">
+          <h5>Normal Traffic</h5>
+          <h3 id="normal-count">0</h3>
+          <div class="progress progress-thin">
+            <div id="normal-bar" class="progress-bar bg-success" role="progressbar" style="width: 0%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="stat-card text-center">
+          <h5>Attack Traffic</h5>
+          <h3 id="attack-count">0</h3>
+          <div class="progress progress-thin">
+            <div id="attack-bar" class="progress-bar bg-danger" role="progressbar" style="width: 0%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="stat-card text-center">
+          <h5>Detection Rate</h5>
+          <h3 id="detection-rate">0%</h3>
+          <small class="text-muted">Accuracy: <span id="model-accuracy">0%</span></small>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <!-- Left Column -->
+      <div class="col-md-8">
+        <!-- Traffic Charts -->
+        <div class="monitor-card mb-4">
+          <div class="row">
+            <div class="col-md-6">
+              <h4 class="text-center mb-3">Traffic Distribution</h4>
+              <div class="chart-container">
+                <canvas id="trafficChart"></canvas>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h4 class="text-center mb-3">Attack Types</h4>
+              <div class="chart-container">
+                <canvas id="attackTypeChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Model Performance -->
+        <div class="monitor-card">
+          <h4 class="text-center mb-3">Model Performance</h4>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="model-card">
+                <h5>KNN Classifier</h5>
+                <div class="d-flex justify-content-between">
+                  <small>Accuracy:</small>
+                  <small id="knn-accuracy">Loading...</small>
+                </div>
+                <div class="progress progress-thin mt-1">
+                  <div id="knn-accuracy-bar" class="progress-bar bg-info" role="progressbar" style="width: 0%"></div>
+                </div>
+                <div class="mt-2">
+                  <small>Last used: <span id="knn-last-used">Never</span></small>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="model-card">
+                <h5>Random Forest</h5>
+                <div class="d-flex justify-content-between">
+                  <small>Accuracy:</small>
+                  <small id="rf-accuracy">Loading...</small>
+                </div>
+                <div class="progress progress-thin mt-1">
+                  <div id="rf-accuracy-bar" class="progress-bar bg-info" role="progressbar" style="width: 0%"></div>
+                </div>
+                <div class="mt-2">
+                  <small>Last used: <span id="rf-last-used">Never</span></small>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="model-card">
+                <h5>Ensemble Model</h5>
+                <div class="d-flex justify-content-between">
+                  <small>Accuracy:</small>
+                  <small id="ensemble-accuracy">Loading...</small>
+                </div>
+                <div class="progress progress-thin mt-1">
+                  <div id="ensemble-accuracy-bar" class="progress-bar bg-info" role="progressbar" style="width: 0%"></div>
+                </div>
+                <div class="mt-2">
+                  <small>Last used: <span id="ensemble-last-used">Never</span></small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right Column -->
+      <div class="col-md-4">
+        <!-- Real-time Predictions -->
+        <div class="monitor-card">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h4 class="mb-0">Recent Predictions</h4>
+            <span class="badge bg-primary" id="prediction-speed">0ms</span>
+          </div>
+          <div id="predictions-container" style="max-height: 500px; overflow-y: auto;">
+            <div class="text-center py-3">Waiting for predictions...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Initialize Charts
+    const trafficCtx = document.getElementById('trafficChart').getContext('2d');
+    const trafficChart = new Chart(trafficCtx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Normal Traffic', 'Attack Traffic'],
+        datasets: [{
+          data: [0, 0],
+          backgroundColor: ['#28a745', '#dc3545'],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: {
+              color: '#ffffff'
+            }
+          }
+        }
+      }
+    });
+    
+    const attackTypeCtx = document.getElementById('attackTypeChart').getContext('2d');
+    const attackTypeChart = new Chart(attackTypeCtx, {
+      type: 'bar',
+      data: {
+        labels: ['DoS', 'Probe', 'R2L', 'U2R'],
+        datasets: [{
+          label: 'Attack Types',
+          data: [0, 0, 0, 0],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.7)',
+            'rgba(54, 162, 235, 0.7)',
+            'rgba(255, 206, 86, 0.7)',
+            'rgba(75, 192, 192, 0.7)'
+          ],
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              color: '#ffffff'
+            },
+            grid: {
+              color: 'rgba(255, 255, 255, 0.1)'
+            }
+          },
+          x: {
+            ticks: {
+              color: '#ffffff'
+            },
+            grid: {
+              color: 'rgba(255, 255, 255, 0.1)'
+            }
+          }
+        },
+        plugins: {
+          legend: {
+            display: false
+          }
+        }
+      }
+    });
+    
+    // Connect to Socket.IO
+    const socket = io();
+    
+    // Format prediction entry
+    function formatPrediction(pred) {
+      const isAttack = pred.prediction === 1;
+      const confidence = (pred.confidence * 100).toFixed(2);
+      const timestamp = new Date().toLocaleTimeString();
+      
+      return `
+        <div class="log-entry ${isAttack ? 'traffic-attack' : 'traffic-normal'}">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <strong>${isAttack ? '🚨 ATTACK' : '✅ Normal'}</strong>
+              <small class="text-muted ms-2">${timestamp}</small><br>
+              <small>Simulated traffic</small>
+            </div>
+            <div class="text-end">
+              <small>${confidence}% confidence</small>
+            </div>
+          </div>
+          <div class="progress mt-2" style="height: 3px;">
+            <div class="progress-bar ${isAttack ? 'bg-danger' : 'bg-success'}" 
+                 style="width: ${confidence}%"></div>
+          </div>
+        </div>
+      `;
+    }
+    
+    // Update stats
+    function updateStats(stats) {
+      document.getElementById('total-predictions').textContent = stats.total_predictions;
+      document.getElementById('normal-count').textContent = stats.normal_count;
+      document.getElementById('attack-count').textContent = stats.attack_count;
+      
+      // Calculate percentages
+      const total = stats.total_predictions || 1;
+      const normalPercent = (stats.normal_count / total * 100).toFixed(1);
+      const attackPercent = (stats.attack_count / total * 100).toFixed(1);
+      
+      document.getElementById('detection-rate').textContent = attackPercent + '%';
+      
+      // Update progress bars
+      document.getElementById('normal-bar').style.width = normalPercent + '%';
+      document.getElementById('attack-bar').style.width = attackPercent + '%';
+      
+      // Update charts
+      trafficChart.data.datasets[0].data = [stats.normal_count, stats.attack_count];
+      trafficChart.update();
+      
+      // Simulate attack type distribution
+      const attackTypes = [
+        Math.min(100, Math.floor(stats.attack_count * 0.6)),  // DoS
+        Math.min(100, Math.floor(stats.attack_count * 0.25)), // Probe
+        Math.min(100, Math.floor(stats.attack_count * 0.1)),  // R2L
+        Math.min(100, Math.floor(stats.attack_count * 0.05))  // U2R
+      ];
+      attackTypeChart.data.datasets[0].data = attackTypes;
+      attackTypeChart.update();
+      
+      // Update model accuracy (simulated)
+      const baseAccuracy = 90 + (stats.normal_count - stats.attack_count) / total * 10;
+      document.getElementById('model-accuracy').textContent = baseAccuracy.toFixed(1) + '%';
+      
+      // Update individual model accuracies (simulated)
+      document.getElementById('knn-accuracy').textContent = (baseAccuracy * 0.95).toFixed(1) + '%';
+      document.getElementById('rf-accuracy').textContent = (baseAccuracy * 0.98).toFixed(1) + '%';
+      document.getElementById('ensemble-accuracy').textContent = baseAccuracy.toFixed(1) + '%';
+      
+      document.getElementById('knn-accuracy-bar').style.width = (baseAccuracy * 0.95) + '%';
+      document.getElementById('rf-accuracy-bar').style.width = (baseAccuracy * 0.98) + '%';
+      document.getElementById('ensemble-accuracy-bar').style.width = baseAccuracy + '%';
+      
+      // Update last used times
+      const now = new Date();
+      document.getElementById('knn-last-used').textContent = now.toLocaleTimeString();
+      document.getElementById('rf-last-used').textContent = now.toLocaleTimeString();
+      document.getElementById('ensemble-last-used').textContent = now.toLocaleTimeString();
+    }
+    
+    // Socket.IO listeners
+    socket.on('new_prediction', (data) => {
+      updateStats(data.stats);
+      
+      const predContainer = document.getElementById('predictions-container');
+      
+      // Remove "waiting" message if present
+      if (predContainer.children.length === 1 && 
+          predContainer.children[0].classList.contains('text-center')) {
+        predContainer.innerHTML = '';
+      }
+      
+      // Add new prediction at the top
+      predContainer.innerHTML = formatPrediction(data.prediction) + predContainer.innerHTML;
+      
+      // Keep only last 10 predictions
+      while (predContainer.children.length > 10) {
+        predContainer.removeChild(predContainer.lastChild);
+      }
+      
+      // Update prediction speed
+      document.getElementById('prediction-speed').textContent = 
+        Math.floor(Math.random() * 100) + 'ms';
+    });
+    
+    socket.on('stats_update', (data) => {
+      updateStats(data.stats);
+    });
+    
+    socket.on('initial_predictions', (data) => {
+      const predContainer = document.getElementById('predictions-container');
+      predContainer.innerHTML = '';
+      
+      if (data.predictions && data.predictions.length > 0) {
+        data.predictions.forEach(pred => {
+          predContainer.innerHTML += formatPrediction(pred);
+        });
+      } else {
+        predContainer.innerHTML = '<div class="text-center py-3">Waiting for predictions...</div>';
+      }
+    });
+    
+    // Request initial data when page loads
+    document.addEventListener('DOMContentLoaded', () => {
+      socket.emit('request_initial_data');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Monitor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    body {
+        background: linear-gradient(to bottom, #000000, #808080);
+        color: #ffffff;
+        min-height: 100vh;
+        padding-top: 2rem;
+    }
+    .activity-card {
+        background-color: #ffffff;
+        color: #000000;
+        border-radius: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        width: 100%;
+        max-width: 600px;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        overflow: hidden;
+    }
+    .container-custom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .entry-title {
+        font-weight: bold;
+        color: #8B0000;
+    }
+    .toggle-button {
+        margin-top: 1rem;
+    }
+    </style>
+</head>
+<body>
+
+<h1 class="text-center mb-5">Data yang Ditangkap</h1>
+
+<div class="container-custom">
+
+{% if entries %}
+    {% for entry in entries %}
+    <div class="activity-card">
+        <h5>{{ entry.hostname }}</h5>
+
+        <div id="details-{{ loop.index }}" style="display: none;">
+            <p><span class="entry-title">Browser History:</span></p>
+            <ul>
+                {% for history in entry.browser_history %}
+                <li>{{ history }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <button class="btn btn-outline-primary toggle-button" onclick="toggleDetails('{{ loop.index }}')" id="btn-{{ loop.index }}">Show Details</button>
+    </div>
+    {% endfor %}
+{% else %}
+    <p>Tidak ada data yang tersedia.</p>
+{% endif %}
+
+</div>
+
+<script>
+function toggleDetails(index) {
+    const details = document.getElementById('details-' + index);
+    const button = document.getElementById('btn-' + index);
+
+    if (details.style.display === 'none') {
+        details.style.display = 'block';
+        button.innerText = 'Hide Details';
+    } else {
+        details.style.display = 'none';
+        button.innerText = 'Show Details';
+    }
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

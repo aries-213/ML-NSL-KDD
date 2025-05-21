@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PBL208</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <strong class="brand">RKS208</strong>
+      <nav>
+        <ul>
+          <li><a href="#">Machine Learning</a></li>
+          <li><a href="#">Log Monitoring</a></li>
+          <li><a href="#">Proxy Servering</a></li>
+          <li><a href="#">Password Hacking</a></li>
+          <li><a href="#">Activity Monitoring</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="nav-right">
+      <div class="search-wrapper">
+        <input type="text" class="search-input" placeholder="Search..." />
+        <i class="fa fa-search"></i>
+      </div>
+      <button class="icon-btn">
+        <img src="images/pbl.png" alt="pbl" class="rounded-icon" />
+      </button>
+      <button class="icon-btn">
+        <img src="images/logo.png" alt="logo" class="rounded-icon" />
+      </button>
+  </header>
+
+  <main class="main-content">
+    <h1>WELCOME TO</h1>
+    <p>Project Based Learning 208</p>
+    <div class="buttons">
+      <button class="btn btn-primary">Dashboard</button>
+    </div>
+  </main>
+
+  <script>
+    function searchTable() {
+      const input = document.querySelector(".search-input").value.toLowerCase();
+      const items = document.querySelectorAll("nav ul li a");
+      items.forEach(item => {
+        if (item.textContent.toLowerCase().includes(input)) {
+          item.style.display = "inline-block";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    }
+  </script>
+</body>
+</html>

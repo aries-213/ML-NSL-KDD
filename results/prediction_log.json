@@ -1,0 +1,1022 @@
+[
+  {
+    "timestamp": "2025-05-04 01:05:30",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.63,
+        "normal_prob": 0.63,
+        "attack_prob": 0.37
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 01:05:36",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.565,
+        "normal_prob": 0.435,
+        "attack_prob": 0.565
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 01:05:42",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.5900000000000001,
+        "normal_prob": 0.5900000000000001,
+        "attack_prob": 0.41000000000000003
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 01:05:48",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.5541666666666667,
+        "normal_prob": 0.5541666666666667,
+        "attack_prob": 0.4458333333333333
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 01:05:54",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.6950000000000001,
+        "normal_prob": 0.6950000000000001,
+        "attack_prob": 0.305
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 01:06:01",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.53,
+        "normal_prob": 0.53,
+        "attack_prob": 0.47000000000000003
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 01:06:07",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.5658333333333333,
+        "normal_prob": 0.43416666666666665,
+        "attack_prob": 0.5658333333333333
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 01:06:13",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.7308333333333333,
+        "normal_prob": 0.26916666666666667,
+        "attack_prob": 0.7308333333333333
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 01:06:19",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.63,
+        "normal_prob": 0.37,
+        "attack_prob": 0.63
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 01:06:25",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.85,
+        "normal_prob": 0.15,
+        "attack_prob": 0.85
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 01:24:59",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.6950000000000001,
+        "normal_prob": 0.6950000000000001,
+        "attack_prob": 0.305
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 01:25:05",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.74,
+        "normal_prob": 0.26,
+        "attack_prob": 0.74
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 01:25:11",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.8033333333333333,
+        "normal_prob": 0.19666666666666666,
+        "attack_prob": 0.8033333333333333
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 01:25:17",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.8058333333333334,
+        "normal_prob": 0.19416666666666665,
+        "attack_prob": 0.8058333333333334
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 01:25:24",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.5900000000000001,
+        "normal_prob": 0.5900000000000001,
+        "attack_prob": 0.41000000000000003
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 01:25:30",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.815,
+        "normal_prob": 0.185,
+        "attack_prob": 0.815
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 14:10:18",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.8025,
+        "normal_prob": 0.1975,
+        "attack_prob": 0.8025
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 14:10:25",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.7225,
+        "normal_prob": 0.27749999999999997,
+        "attack_prob": 0.7225
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 14:10:31",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.75,
+        "normal_prob": 0.25,
+        "attack_prob": 0.75
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 14:10:37",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.6225,
+        "normal_prob": 0.6225,
+        "attack_prob": 0.37750000000000006
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 14:10:44",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.51,
+        "normal_prob": 0.49,
+        "attack_prob": 0.51
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 14:10:50",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.725,
+        "normal_prob": 0.725,
+        "attack_prob": 0.275
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 14:10:56",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.5741666666666667,
+        "normal_prob": 0.5741666666666667,
+        "attack_prob": 0.4258333333333333
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 14:11:03",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.5325,
+        "normal_prob": 0.5325,
+        "attack_prob": 0.4675
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 14:11:09",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.665,
+        "normal_prob": 0.665,
+        "attack_prob": 0.335
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 14:11:15",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.75,
+        "normal_prob": 0.25,
+        "attack_prob": 0.75
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 15:31:57",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.9125,
+        "normal_prob": 0.0875,
+        "attack_prob": 0.9125
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 15:32:03",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.585,
+        "normal_prob": 0.585,
+        "attack_prob": 0.41500000000000004
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 15:32:09",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.6175,
+        "normal_prob": 0.6175,
+        "attack_prob": 0.38249999999999995
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 15:32:16",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.555,
+        "normal_prob": 0.555,
+        "attack_prob": 0.44499999999999995
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 15:32:22",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.8474999999999999,
+        "normal_prob": 0.1525,
+        "attack_prob": 0.8474999999999999
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 15:32:28",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.7533333333333333,
+        "normal_prob": 0.24666666666666667,
+        "attack_prob": 0.7533333333333333
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 15:32:34",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.7325,
+        "normal_prob": 0.2675,
+        "attack_prob": 0.7325
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 15:32:41",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.515,
+        "normal_prob": 0.515,
+        "attack_prob": 0.485
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 15:32:47",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.575,
+        "normal_prob": 0.575,
+        "attack_prob": 0.42500000000000004
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-04 15:32:53",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.5108333333333333,
+        "normal_prob": 0.48916666666666664,
+        "attack_prob": 0.5108333333333333
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-05 20:24:11",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.715,
+        "normal_prob": 0.715,
+        "attack_prob": 0.285
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-05 20:24:18",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.5800000000000001,
+        "normal_prob": 0.5800000000000001,
+        "attack_prob": 0.42000000000000004
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-05 20:24:24",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.5425,
+        "normal_prob": 0.4575,
+        "attack_prob": 0.5425
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-05 20:24:30",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.5700000000000001,
+        "normal_prob": 0.43000000000000005,
+        "attack_prob": 0.5700000000000001
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-05 20:24:36",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.575,
+        "normal_prob": 0.42500000000000004,
+        "attack_prob": 0.575
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-05 20:24:43",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.8208333333333333,
+        "normal_prob": 0.17916666666666664,
+        "attack_prob": 0.8208333333333333
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-05 20:24:49",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.7291666666666666,
+        "normal_prob": 0.7291666666666666,
+        "attack_prob": 0.2708333333333333
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-05 20:24:55",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.5650000000000001,
+        "normal_prob": 0.5650000000000001,
+        "attack_prob": 0.43500000000000005
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-05 20:25:01",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.525,
+        "normal_prob": 0.525,
+        "attack_prob": 0.47500000000000003
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-05 20:25:07",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.655,
+        "normal_prob": 0.655,
+        "attack_prob": 0.345
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 10:48:33",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.72,
+        "normal_prob": 0.72,
+        "attack_prob": 0.28
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 10:48:39",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.63,
+        "normal_prob": 0.63,
+        "attack_prob": 0.37
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 10:48:46",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.85,
+        "normal_prob": 0.15,
+        "attack_prob": 0.85
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 10:48:52",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.64,
+        "normal_prob": 0.64,
+        "attack_prob": 0.36
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 10:48:58",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.505,
+        "normal_prob": 0.505,
+        "attack_prob": 0.495
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 10:49:05",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.5391666666666667,
+        "normal_prob": 0.5391666666666667,
+        "attack_prob": 0.4608333333333333
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 10:49:11",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.575,
+        "normal_prob": 0.575,
+        "attack_prob": 0.42500000000000004
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 10:49:17",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.5941666666666667,
+        "normal_prob": 0.5941666666666667,
+        "attack_prob": 0.4058333333333334
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 10:49:24",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.5449999999999999,
+        "normal_prob": 0.5449999999999999,
+        "attack_prob": 0.455
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 10:49:30",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.8316666666666668,
+        "normal_prob": 0.16833333333333336,
+        "attack_prob": 0.8316666666666668
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 11:18:05",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.8508333333333333,
+        "normal_prob": 0.14916666666666667,
+        "attack_prob": 0.8508333333333333
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 11:18:12",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.5716666666666667,
+        "normal_prob": 0.42833333333333334,
+        "attack_prob": 0.5716666666666667
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 11:18:18",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.7008333333333334,
+        "normal_prob": 0.29916666666666664,
+        "attack_prob": 0.7008333333333334
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 11:19:35",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.7216666666666667,
+        "normal_prob": 0.2783333333333333,
+        "attack_prob": 0.7216666666666667
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 11:19:42",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.69,
+        "normal_prob": 0.69,
+        "attack_prob": 0.31
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 11:19:48",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.55,
+        "normal_prob": 0.55,
+        "attack_prob": 0.45
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 11:19:54",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.5874999999999999,
+        "normal_prob": 0.4125,
+        "attack_prob": 0.5874999999999999
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 11:20:00",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.5900000000000001,
+        "normal_prob": 0.5900000000000001,
+        "attack_prob": 0.41000000000000003
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 11:20:07",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.815,
+        "normal_prob": 0.185,
+        "attack_prob": 0.815
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 11:20:13",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.885,
+        "normal_prob": 0.115,
+        "attack_prob": 0.885
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 11:20:19",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.69,
+        "normal_prob": 0.31,
+        "attack_prob": 0.69
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 11:20:26",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.73,
+        "normal_prob": 0.73,
+        "attack_prob": 0.27
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 11:20:32",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.8583333333333333,
+        "normal_prob": 0.14166666666666666,
+        "attack_prob": 0.8583333333333333
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 11:54:44",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.685,
+        "normal_prob": 0.685,
+        "attack_prob": 0.315
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 11:54:50",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.6950000000000001,
+        "normal_prob": 0.6950000000000001,
+        "attack_prob": 0.305
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 11:54:56",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.8049999999999999,
+        "normal_prob": 0.195,
+        "attack_prob": 0.8049999999999999
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 11:55:02",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.6891666666666667,
+        "normal_prob": 0.6891666666666667,
+        "attack_prob": 0.3108333333333333
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 12:22:15",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.7591666666666667,
+        "normal_prob": 0.7591666666666667,
+        "attack_prob": 0.24083333333333332
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 12:22:21",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.7816666666666666,
+        "normal_prob": 0.21833333333333335,
+        "attack_prob": 0.7816666666666666
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 12:22:27",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.6641666666666667,
+        "normal_prob": 0.6641666666666667,
+        "attack_prob": 0.33583333333333326
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 12:22:34",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.8775,
+        "normal_prob": 0.12250000000000001,
+        "attack_prob": 0.8775
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 12:22:40",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.5425,
+        "normal_prob": 0.4575,
+        "attack_prob": 0.5425
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 12:22:46",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.505,
+        "normal_prob": 0.495,
+        "attack_prob": 0.505
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 12:22:52",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.51,
+        "normal_prob": 0.49,
+        "attack_prob": 0.51
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 12:22:58",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.8383333333333333,
+        "normal_prob": 0.16166666666666665,
+        "attack_prob": 0.8383333333333333
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 12:23:05",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.6950000000000001,
+        "normal_prob": 0.6950000000000001,
+        "attack_prob": 0.305
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 12:23:11",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.71,
+        "normal_prob": 0.29000000000000004,
+        "attack_prob": 0.71
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 12:41:04",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 0,
+        "confidence": 0.79,
+        "normal_prob": 0.79,
+        "attack_prob": 0.21
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-05-06 12:41:10",
+    "predictions": [
+      {
+        "id": 0,
+        "prediction": 1,
+        "confidence": 0.52,
+        "normal_prob": 0.48,
+        "attack_prob": 0.52
+      }
+    ]
+  }
+]
